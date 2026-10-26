@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Форма аренды автомобиля</title>
+    <link rel="stylesheet" href="styles/all.css" />
+    <link rel="stylesheet" href="styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles/datepicker.css" />
+    <link rel="stylesheet" href="styles/font-awesome.min.css" />
+    <link rel="stylesheet" href="styles/modal_window.css" />
+    <link rel="icon" href="styles/logo.png" />
+  </head>
+  <body>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <section id="teaser" class="request_form">
+          <form
+            action="#"
+            name="car-select-form-modal"
+            id="car-select-form-modal"
+            class="car-select-form"
+            data-gtm-form-interact-id="0"
+          >
+            <!-- Modal header start -->
+            <div class="modal-header">
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-hidden="true"
+              >
+                ×
+              </button>
+              <h4 class="modal-title" id="myModalLabel">Отправить запрос</h4>
+            </div>
+            <!-- Modal header end -->
+
+            <!-- Modal body start -->
+            <div class="modal-body" style="padding: 20px">
+              <div class="alert alert-danger hidden car-select-form-msg">
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="alert"
+                  aria-hidden="true"
+                >
+                  ×
+                </button>
+                <strong>Внимание:</strong> Все поля обязательны для заполнения!
+              </div>
+
+              <!-- Car select start -->
+              <div class="styled-select-car">
+                <select name="car-select" class="car-select">
+                  <option value="">Выберите авто</option>
+
+                  <option
+                    value="/media/cars/IMG-20210301-WA00111.750x410.jpg"
+                    data-car-id="38"
+                  >
+                    NISSAN NOTE Автомат
+                  </option>
+
+                  <option
+                    value="/media/cars/IMG_2351.1.750x410.jpg"
+                    data-car-id="6"
+                  >
+                    HYUNDAI i30 Автомат
+                  </option>
+
+                  <option
+                    value="/media/cars/63419.750x410.jpg"
+                    data-car-id="51"
+                  >
+                    TOYOTA YARIS Автомат
+                  </option>
+
+                  <option
+                    value="/media/cars/IMG-bf2979e76abb348da2682ab8899b0eef-V-compressor_3wycMv9.750x410.jpg"
+                    data-car-id="46"
+                  >
+                    HYUNDAI H-1 Starex
+                  </option>
+
+                  <option
+                    value="/media/cars/2023-Hyundai-i10-4.750x410.webp"
+                    data-car-id="50"
+                  >
+                    HYUNDAI i10 Автомат
+                  </option>
+
+                  <option
+                    value="/media/cars/20150602_132219.1_M8xh0fU_LPuKbEg.750x410.jpg"
+                    data-car-id="24"
+                  >
+                    TOYOTA AURIS Dizel
+                  </option>
+
+                  <option
+                    value="/media/cars/whitecabrio.750x410.jpg"
+                    data-car-id="47"
+                  >
+                    AUDI A3 Cabrio
+                  </option>
+
+                  <option
+                    value="/media/cars/4d0751ebdcfa5-compressor.750x410.jpeg"
+                    data-car-id="26"
+                  >
+                    Chevrolet Orlando 7 мест
+                  </option>
+
+                  <option
+                    value="/media/cars/_20_11_nVEzRPk.750x410.jpg"
+                    data-car-id="27"
+                  >
+                    FORD C MAX 7 мест
+                  </option>
+
+                  <option
+                    value="/media/cars/images_3_Xra41Zh.750x410.jpg"
+                    data-car-id="52"
+                  >
+                    KIA STONIC Автомат
+                  </option>
+
+                  <option
+                    value="/media/cars/88ce7a18c33ff29f-main.750x410.jpg"
+                    data-car-id="41"
+                  >
+                    MINI COOPER Cabrio
+                  </option>
+
+                  <option
+                    value="/media/cars/i20-2012-2014.750x410.jpg"
+                    data-car-id="42"
+                  >
+                    HYUNDAI i20 Автомат
+                  </option>
+
+                  <option
+                    value="/media/cars/opel_cascada_1.750x410.jpg"
+                    data-car-id="43"
+                  >
+                    OPEL CASKADA Автомат
+                  </option>
+
+                  <option
+                    value="/media/cars/63419.750x410.jpg"
+                    data-car-id="51"
+                    selected="selected"
+                  >
+                    Mercedes Benz e200 Cabrio
+                  </option>
+                </select>
+              </div>
+              <!-- Car select end -->
+
+              <!-- Pick-up location start -->
+              <div class="location">
+                <div class="input-group pick-up">
+                  <span class="input-group-addon"
+                    ><span class="glyphicon glyphicon-map-marker"></span>
+                    Выдача</span
+                  >
+                  <input
+                    type="text"
+                    name="pick-up-location"
+                    class="pick-up-location form-control"
+                    placeholder="Введите город или аэропорт"
+                    wfd-id="id5"
+                    data-gtm-form-interact-field-id="0"
+                  />
+                </div>
+                <!-- Pick-up location end -->
+                <a class="different-drop-off" href="#"
+                  >Другое место возврата?</a
+                >
+
+                <!-- Drop-off location start -->
+                <div class="input-group drop-off" style="display: none">
+                  <span class="input-group-addon"
+                    ><span class="glyphicon glyphicon-map-marker"></span>
+                    Возврат</span
+                  >
+                  <input
+                    type="text"
+                    name="drop-off-location"
+                    class="drop-off-location form-control"
+                    placeholder="Введите город или аэропорт"
+                    wfd-id="id6"
+                    data-gtm-form-interact-field-id="1"
+                  />
+                </div>
+              </div>
+              <!-- Drop-off location end -->
+
+              <!-- Pick-up date/time start -->
+              <div class="datetime pick-up">
+                <div class="date pull-left">
+                  <div class="input-group">
+                    <span class="input-group-addon pixelfix"
+                      ><span class="glyphicon glyphicon-calendar"></span>
+                      Выдача</span
+                    >
+                    <input
+                      type="text"
+                      name="pick-up-date"
+                      class="pick-up-date form-control datepicker-reservation"
+                      placeholder="Д/М/Г"
+                      wfd-id="id7"
+                    />
+                  </div>
+                </div>
+                <div class="time pull-right">
+                  <div class="styled-select-time">
+                    <select name="pick-up-time" class="pick-up-time">
+                      <option value="00:00">00:00</option>
+                      <option value="05:00">05:00</option>
+                      <option value="05:30">05:30</option>
+                      <option value="06:00">06:00</option>
+                      <option value="06:30">06:30</option>
+                      <option value="07:00">07:00</option>
+                      <option value="07:10">07:10</option>
+                      <option value="07:20">07:20</option>
+                      <option value="07:30">07:30</option>
+                      <option value="07:40">07:40</option>
+                      <option value="07:50">07:50</option>
+                      <option value="08:00">08:00</option>
+                      <option value="08:10">08:10</option>
+                      <option value="08:20">08:20</option>
+                      <option value="08:30">08:30</option>
+                      <option value="08:40">08:40</option>
+                      <option value="08:50">08:50</option>
+                      <option value="09:00" selected="">09:00</option>
+                      <option value="09:10">09:10</option>
+                      <option value="09:20">09:20</option>
+                      <option value="09:30">09:30</option>
+                      <option value="09:40">09:40</option>
+                      <option value="09:50">09:50</option>
+                      <option value="10:00">10:00</option>
+                      <option value="10:10">10:10</option>
+                      <option value="10:20">10:20</option>
+                      <option value="10:30">10:30</option>
+                      <option value="10:40">10:40</option>
+                      <option value="10:50">10:50</option>
+                      <option value="11:00">11:00</option>
+                      <option value="11:10">11:10</option>
+                      <option value="11:30">11:30</option>
+                      <option value="11:40">11:40</option>
+                      <option value="11:50">11:50</option>
+                      <option value="12:00">12:00</option>
+                      <option value="12:10">12:10</option>
+                      <option value="12:20">12:20</option>
+                      <option value="12:30">12:30</option>
+                      <option value="12:40">12:40</option>
+                      <option value="13:00">13:00</option>
+                      <option value="13:30">13:30</option>
+                      <option value="14:00">14:00</option>
+                      <option value="14:30">14:30</option>
+                      <option value="15:00">15:00</option>
+                      <option value="15:30">15:30</option>
+                      <option value="16:00">16:00</option>
+                      <option value="16:30">16:30</option>
+                      <option value="17:00">17:00</option>
+                      <option value="17:30">17:30</option>
+                      <option value="18:00">18:00</option>
+                      <option value="18:30">18:30</option>
+                      <option value="19:00">19:00</option>
+                      <option value="19:30">19:30</option>
+                      <option value="20:00">20:00</option>
+                      <option value="20:30">20:30</option>
+                      <option value="21:00">21:00</option>
+                      <option value="21:30">21:30</option>
+                      <option value="22:00">22:00</option>
+                      <option value="22:30">22:30</option>
+                      <option value="23:00">23:00</option>
+                      <option value="23:30">23:30</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <!-- Pick-up date/time end -->
+
+              <!-- Drop-off date/time start -->
+              <div class="datetime drop-off">
+                <div class="date pull-left">
+                  <div class="input-group">
+                    <span class="input-group-addon pixelfix"
+                      ><span class="glyphicon glyphicon-calendar"></span>
+                      Возврат</span
+                    >
+                    <input
+                      type="text"
+                      name="drop-off-date"
+                      class="drop-off-date form-control datepicker-reservation"
+                      placeholder="Д/М/Г"
+                      wfd-id="id8"
+                    />
+                  </div>
+                </div>
+                <div class="time pull-right">
+                  <div class="styled-select-time">
+                    <select name="drop-off-time" class="drop-off-time">
+                      <option value="00:00">00:00</option>
+                      <option value="05:00">05:00</option>
+                      <option value="05:30">05:30</option>
+                      <option value="06:00">06:00</option>
+                      <option value="06:30">06:30</option>
+                      <option value="07:00">07:00</option>
+                      <option value="07:10">07:10</option>
+                      <option value="07:30">07:30</option>
+                      <option value="08:00">08:00</option>
+                      <option value="08:30">08:30</option>
+                      <option value="09:00" selected="">09:00</option>
+                      <option value="09:30">09:30</option>
+                      <option value="09:40">09:40</option>
+                      <option value="09:50">09:50</option>
+                      <option value="10:00">10:00</option>
+                      <option value="10:10">10:10</option>
+                      <option value="10:20">10:30</option>
+                      <option value="10:30">10:30</option>
+                      <option value="10:40">10:40</option>
+                      <option value="10:50">10:50</option>
+                      <option value="11:00">11:00</option>
+                      <option value="11:10">11:10</option>
+                      <option value="11:30">11:30</option>
+                      <option value="12:00">12:00</option>
+                      <option value="12:00">12:10</option>
+                      <option value="12:30">12:30</option>
+                      <option value="13:00">13:00</option>
+                      <option value="13:30">13:30</option>
+                      <option value="14:00">14:00</option>
+                      <option value="14:30">14:30</option>
+                      <option value="15:00">15:00</option>
+                      <option value="15:30">15:30</option>
+                      <option value="16:00">16:00</option>
+                      <option value="16:30">16:30</option>
+                      <option value="17:00">17:00</option>
+                      <option value="17:30">17:30</option>
+                      <option value="18:00">18:00</option>
+                      <option value="18:30">18:30</option>
+                      <option value="19:00">19:00</option>
+                      <option value="19:30">19:30</option>
+                      <option value="20:00">20:00</option>
+                      <option value="20:30">20:30</option>
+                      <option value="21:00">21:00</option>
+                      <option value="21:30">21:30</option>
+                      <option value="22:00">22:00</option>
+                      <option value="22:30">22:30</option>
+                      <option value="23:00">23:00</option>
+                      <option value="23:30">23:30</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <!-- Drop-off date/time end -->
+
+              <input
+                type="submit"
+                class="submit"
+                name="submit"
+                value="Продолжить"
+                id="checkoutModalLabel"
+                wfd-id="id9"
+              />
+            </div>
+            <!-- Modal body end -->
+          </form>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
